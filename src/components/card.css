@@ -1,0 +1,82 @@
+.sectionInfomation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.1rem;
+    
+ }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.8px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+
+.informationCard-icon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.informationCard-icon>small {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1024px) {
+    .sectionInfomation {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+   
+  .card {
+    width: 200px;
+    height: 100px;
+    background-color:transparent;
+    margin: 10px;
+    opacity: 0; 
+    animation-name: slideInFromdown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+ 
+
+  }
+  
+  @keyframes slideInFromdown {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  } 
+
+  
+ 
+  
+  
+  

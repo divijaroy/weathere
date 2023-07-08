@@ -1,0 +1,347 @@
+ 
+
+
+.notification {
+  position: fixed;
+   
+  right: 0px;
+  
+  background-color: #e41749;
+  color: white;
+  padding: 10px 20px;
+   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+}
+
+.snotification {
+  position: fixed;
+   
+  right: 0px;
+  
+  background-color: #DFF2BF;
+  color: white;
+  padding: 10px 20px;
+   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.notification p {
+  margin: 0;
+    font-size: 20px;
+  padding-right: 10px;
+}
+.notification::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.0px;
+  width: 100%;
+  background-color:white;
+  animation: slideInRight 2s linear;
+}
+
+.snotification p {
+  margin: 0;
+    font-size: 20px;
+   color: #270;
+  padding-right: 10px;
+}
+.snotification::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color:#270;
+  animation: slideInRight 2.7s linear;
+}
+
+ 
+ 
+ 
+
+
+:root {
+    --section-overlay: rgba(0, 0, 0, 0.7);
+    --background-overlay: rgba(0, 0, 0, 0.2);
+  }
+  
+  
+
+
+
+
+  .app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    
+  }
+
+   
+   
+   .video-background  {
+    width: 100%; height: 100%; 
+    object-fit:fill;
+  }
+  .canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-overlay);
+    z-index: 2;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+   
+ 
+
+::placeholder {  
+    color:white;
+     font-size: medium; 
+       opacity: 0.8; 
+  }
+  
+  h1{
+     font-weight:100;
+ 
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir Light',sans-serif;
+    font-weight:100
+
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-overlay);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+ 
+.section {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 20px;
+    color: white;
+}
+
+.sectionInputs
+
+{
+    display: flex;
+  
+    width:65%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+
+}
+
+.sectionTemperature {
+    display: flex;
+    width:57%;
+    text-align: right;
+     align-items: center;
+    justify-content: space-between;
+     border: 0.8px solid white;
+     border-radius: 20px;
+ 
+    background-color: transparent; 
+ 
+  }
+
+  sectionTemperature>h2{
+    text-align: center;
+  }
+  
+.sectionTemperature:hover {
+     background-color: rgba(255, 255, 255, 0.15);
+  }
+ 
+.sectionInputs>input {
+    border: 0.8px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 200;
+
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 0.8px solid white;
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+   font-size: 20px;
+  margin-right: 5px;
+/* padding: 0.5px; */
+
+  font-weight: 200;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 200;
+   
+}
+
+.input-wrapper button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+
+
+.input-wrapper>input:focus {
+    outline: none;
+}
+
+.sectionInputs>button {
+    padding: 7px 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 0.8px solid white;
+    border-radius: 30px;
+     color: white;
+     font-size: 20px;
+    font-weight: 500;
+     
+    background-color: rgba(255, 255, 255, 0.15);
+
+   
+}
+
+.sectionInputs>button:hover {
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon>h3 {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.temperature>h1 {
+    font-size: 60px;
+}
+ 
+
+
+ .iconimg{
+  
+  border: 0.8px solid white;
+  margin-top: 1px;
+  margin-bottom: 3px;
+   border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.20);
+  color: white;
+  
+ }
+ .temperature{
+   margin-left: 30px;
+  margin-right: 0px;
+
+ }
